@@ -1,0 +1,2 @@
+## MVP
+- [ ] Implement payment adapter
