@@ -1,21 +1,2 @@
 Title,Body,Labels,Milestone
-DB: migrate to PostgreSQL,"Persist artists/tips/payouts",MVP,Init
-Payments: sandbox adapter,"Implement create_session + verify_signature",MVP,Init
-Webhook: mark tip succeeded,"Consume webhook, verify signature, update status",MVP,MVP
-FE: /artist/:slug page,"Public profile page with QR + Tip button",MVP,MVP
-QR: printable assets,"Generate PNG/PDF cards with instructions",MVP,MVP
-Pilot: onboarding & feedback,"Prepare script and short survey",MVP,MVP
-Admin: payout export (CSV),"Export settled tips by artist & date",Beta,Beta
-Notifications,"Email/SMS notifications on tip success",Beta,Beta
-Auth: admin endpoints,"Basic auth/JWT for admin",Beta,Beta
-i18n & currency formatting,"Support locales and currencies",Beta,Beta
-Observability,"Add error tracking and basic metrics",GA,GA
-Security hardening,"Threat model + headers + dependency updates",GA,GA
-Provider redundancy,"Fallback to secondary provider",GA,GA
-CI: lint & unit tests,"Add flake8/eslint + tests",MVP,MVP
-Docs: sequence diagram,"End-to-end flow diagram",MVP,MVP
-DB migrations tool,"Introduce migrations (Alembic)",Beta,Beta
-UX polish (mobile),"Spacing, inputs, error states",MVP,MVP
-Error paths,"Failing payment flows and timeouts",MVP,MVP
-Runbooks,"Incident response + oncall basics",GA,GA
-Data export policy,"Export/delete requests (future)",GA,GA
+DB: migrate to PostgreSQL,Persist data,MVP,Init

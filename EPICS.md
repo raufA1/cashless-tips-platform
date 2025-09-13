@@ -1,1 +1,1 @@
-Payments Adapter, Artist Experience, Admin & Payouts, Platform & Quality.
+Payments Adapter; Artist Experience; Admin & Payouts; Platform & Quality.

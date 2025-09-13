@@ -1,1 +1,21 @@
+# This workflow is optional and can be configured to automatically add new issues or pull requests to a GitHub project.
+# To enable it, you need to specify the project number and the column name.
+# For more information, see the GitHub Actions documentation.
 name: Add to Project (Optional)
+on:
+  issues:
+    types: [opened]
+  pull_request:
+    types: [opened]
+jobs:
+  add-to-project:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Add to project
+        uses: actions/add-to-project@v0.5.0
+        with:
+          # You need to provide a project URL and a GitHub token with project permissions.
+          # project-url: "https://github.com/users/your-username/projects/your-project-number"
+          # github-token: ${{ secrets.ADD_TO_PROJECT_PAT }}
+          labeled: ""
+          label-operator: OR

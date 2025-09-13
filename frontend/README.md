@@ -1,1 +1,1 @@
-Run dev server with npm install && npm run dev.
+npm install && npm run dev

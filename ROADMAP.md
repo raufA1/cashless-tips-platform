@@ -1,3 +1,3 @@
-# Roadmap
+# Roadmap – TipBridge
 
-- MVP → Beta → GA milestones. See MASTER_PLAN.md for details.
+Phases: MVP → Pilot → Expansion → Global.

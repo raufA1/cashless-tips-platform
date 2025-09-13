@@ -1,1 +1,1 @@
-EMVCo + national QR variants can be plugged via adapters.
+EMVCo + national variants pluggable

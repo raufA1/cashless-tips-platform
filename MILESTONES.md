@@ -1,1 +1,1 @@
-Init, MVP, Beta, GA — create under Issues → Milestones.
+Init, MVP, Pilot, Expansion, Global
