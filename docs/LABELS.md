@@ -1,1 +1,1 @@
-Labels setup with gh CLI.
+Use gh CLI to create labels: MVP, priority:*, type:*, area:*.

@@ -1,8 +1,4 @@
-import json
-import hashlib
-import hmac
-import os
-import time
+import hashlib, hmac, os, time
 
 class MockProvider:
     def __init__(self):

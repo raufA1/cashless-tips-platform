@@ -3,5 +3,5 @@ from .mock import MockProvider
 
 def get_provider():
     name = os.getenv("PAYMENT_PROVIDER", "mock").lower()
-    # Extend here: if name == "epoint": return EpointProvider(...)
+    # TODO: add other providers e.g. Stripe/Epoint with dedicated classes
     return MockProvider()

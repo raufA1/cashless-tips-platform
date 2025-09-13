@@ -6,7 +6,6 @@ from .providers import get_provider
 
 app = FastAPI(title="TipBridge API", version="0.1.0")
 
-# --- Models (Pydantic) ---
 class ArtistCreate(BaseModel):
     name: str
     tax_id: str | None = None
@@ -17,7 +16,6 @@ class TipCreate(BaseModel):
     amount: float
     currency: str = "USD"
 
-# --- In-memory store (replace with DB layer) ---
 ARTISTS = {"demo-artist": {"name": "Demo Artist", "tax_id": None, "iban": None}}
 TIPS = []
 
@@ -42,7 +40,6 @@ async def get_artist(slug: str):
 
 @app.post("/api/tips/create")
 async def create_tip(payload: TipCreate, provider=Depends(get_provider)):
-    # TODO: replace with DB lookups
     if payload.artist_slug not in ARTISTS:
         raise HTTPException(status_code=404, detail="Artist not found")
 

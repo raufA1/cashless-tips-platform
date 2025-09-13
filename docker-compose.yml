@@ -10,6 +10,7 @@ services:
       - "5432:5432"
     volumes:
       - dbdata:/var/lib/postgresql/data
+
   backend:
     build: ./backend
     environment:
@@ -22,11 +23,13 @@ services:
       - db
     ports:
       - "8000:8000"
+
   frontend:
     build: ./frontend
     depends_on:
       - backend
     ports:
       - "5173:5173"
+
 volumes:
   dbdata:
