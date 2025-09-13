@@ -1,0 +1,32 @@
+version: "3.9"
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: tipbridge
+      POSTGRES_PASSWORD: tipbridge
+      POSTGRES_DB: tipbridge
+    ports:
+      - "5432:5432"
+    volumes:
+      - dbdata:/var/lib/postgresql/data
+  backend:
+    build: ./backend
+    environment:
+      - DATABASE_URL=postgresql://tipbridge:tipbridge@db:5432/tipbridge
+      - PAYMENT_PROVIDER=mock
+      - PAYMENT_API_KEY=dev
+      - PAYMENT_WEBHOOK_SECRET=dev
+      - SECRET_KEY=dev
+    depends_on:
+      - db
+    ports:
+      - "8000:8000"
+  frontend:
+    build: ./frontend
+    depends_on:
+      - backend
+    ports:
+      - "5173:5173"
+volumes:
+  dbdata:
